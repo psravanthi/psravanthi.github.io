@@ -56,15 +56,15 @@ EXIST    = The cumulative exit register value for a device
 #### Data Cleaning: 
 Although the data looks clean, it required serious cleaning and checks.
 Some anomalies and data cleaning/handling measures:
-•	Station name inconsistencies: Different spellings for the same station (e.g., ‘1 AV’ vs.  ‘1 AVE’)
+*	Station name inconsistencies: Different spellings for the same station (e.g., ‘1 AV’ vs.  ‘1 AVE’)
                Normalized the station names using the station key from MTA station list.
-•	Line name inconsistencies  (e.g., ‘ABC123’ vs. ‘123ABC’)
+*	Line name inconsistencies  (e.g., ‘ABC123’ vs. ‘123ABC’)
                Replaced line names with corresponding units to avoid inconsistencies
-•	Decreasing cumulative entry/exit counts:
+*	Decreasing cumulative entry/exit counts:
 Used absolute count differences to address decreasing counts
-•	Impossibly large counts:
+*	Impossibly large counts:
            Computed entry/exit rates (usual entry/ exit per sec ) to replace outlier counts with the median
-•	Readings off by an hour:
+*	Readings off by an hour:
             Adjusted the off-by-an-hour counts to the nearest time
 
 #### Data Analysis/visualization:
