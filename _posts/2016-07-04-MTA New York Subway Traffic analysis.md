@@ -10,32 +10,46 @@ The steps followed for the analysis are as follows:
 * Data Analysis/Visualization
 * Recommendations
 
-#### Data Extraction:####  The New York subway traffic data can be found at MTA turnstile data (add link). 
+#### Data Extraction  The New York subway traffic data can be found at MTA turnstile data [here](http://web.mta.info/developers/turnstile.html)
 
 A look at the raw data:
 C/A,UNIT,SCP,STATION,LINENAME,DIVISION,DATE,TIME,DESC,ENTRIES,EXITS
 A002,R051,02-00-00,LEXINGTON AVE,456NQR,BMT,09-27-14,00:00:00,REGULAR,0004800073,0001629137,
+
 A002,R051,02-00-00,LEXINGTON AVE,456NQR,BMT,09-27-14,04:00:00,REGULAR,0004800125,0001629149,
+
 A002,R051,02-00-00,LEXINGTON AVE,456NQR,BMT,09-27-14,08:00:00,REGULAR,0004800146,0001629162,
+
 A002,R051,02-00-00,LEXINGTON AVE,456NQR,BMT,09-27-14,12:00:00,REGULAR,0004800264,0001629264,
+
 A002,R051,02-00-00,LEXINGTON AVE,456NQR,BMT,09-27-14,16:00:00,REGULAR,0004800523,0001629328,
 
 The data shows the entry/exit register values for each turnstile per control area per station for every four hours.
 Data description: 
 
 C/A      = Control Area 
+
 UNIT     = Remote Unit for a station 
+
 SCP      = Subunit Channel Position represents an specific address for a device 
+
 STATION  = Represents the station name the device is located at
+
 LINENAME = Represents all train lines that can be boarded at this station
            Normally lines are represented by one character
-DIVISION = Represents the Line originally the station belonged to BMT, IRT, or IND   
+           
+DIVISION = Represents the Line originally the station belonged to BMT, IRT, or IND 
+
 DATE     = Represents the date (MM-DD-YY)
+
 TIME     = Represents the time (hh:mm:ss) for a scheduled audit event
+
 DESc     = Represent the "REGULAR" scheduled audit event (Normally occurs every 4 hours)
            1. Audits may occur more then 4 hours due to planning, or troubleshooting activities. 
            2. Additionally, there may be a "RECOVR AUD" entry: This refers to a missed audit that was recovered. 
+           
 ENTRIES  = The cumulative entry register value for a device
+
 EXIST    = The cumulative exit register value for a device
 
 
@@ -49,9 +63,9 @@ Some anomalies and data cleaning/handling measures:
 •	Decreasing cumulative entry/exit counts:
 Used absolute count differences to address decreasing counts
 •	Impossibly large counts:
-Computed entry/exit rates (usual entry/ exit per sec ) to replace outlier counts with the median
+           Computed entry/exit rates (usual entry/ exit per sec ) to replace outlier counts with the median
 •	Readings off by an hour:
-Adjusted the off-by-an-hour counts to the nearest time
+            Adjusted the off-by-an-hour counts to the nearest time
 
 #### Data Analysis/visualization:
 The following graph shows the relationship between the average ridership and day of week:
