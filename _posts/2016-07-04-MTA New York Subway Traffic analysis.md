@@ -10,7 +10,7 @@ The steps followed for the analysis are as follows:
 * Data Analysis/Visualization
 * Recommendations
 
-#### Data Extraction:  The New York subway traffic data can be found at MTA turnstile data (add link). 
+#### Data Extraction:####  The New York subway traffic data can be found at MTA turnstile data (add link). 
 A look at the raw data:
 Copy the raw data
 The data shows the entry/exit register values for each turnstile per control area per station for every four hours.
