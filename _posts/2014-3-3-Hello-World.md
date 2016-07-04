@@ -1,10 +1,5 @@
----
-layout: post
-title: You're up and running!
----
+                                      ##MTA New York Subway Traffic analysis
 
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
+I spent my first week of Metis working on a project to analyze the movement of New Yorkers through MTA turnstile data. The objective was to help a hypothetical client, WTWY (WomenTechWomenYes) to increase attendance for their annual gala, build awareness, and to increase contributions. The client intends to place street teams at entrances to subway stations. The street teams collect email addresses and those who sign up are sent free tickets to the gala.
 
-![_config.yml]({{ site.baseurl }}/images/config.png)
 
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
