@@ -18,28 +18,23 @@ The steps followed for the analysis are as follows:
 The New York subway traffic data can be found at MTA turnstile data [here](http://web.mta.info/developers/turnstile.html)
 
 A look at the raw data:
-<sub>
-C/A,UNIT,SCP,STATION,LINENAME,DIVISION,DATE,TIME,DESC,ENTRIES,EXITS
-A002,R051,02-00-00,LEXINGTON AVE,456NQR,BMT,09-27-14,00:00:00,REGULAR,0004800073,0001629137,
 
-A002,R051,02-00-00,LEXINGTON AVE,456NQR,BMT,09-27-14,04:00:00,REGULAR,0004800125,0001629149,
-</sub>
+<sub> C/A,UNIT,SCP,STATION,LINENAME,DIVISION,DATE,TIME,DESC,ENTRIES,EXITS </sub>
+<sub>A002,R051,02-00-00,LEXINGTON AVE,456NQR,BMT,09-27-14,00:00:00,REGULAR,0004800073,0001629137, </sub>
+
+<sub>A002,R051,02-00-00,LEXINGTON AVE,456NQR,BMT,09-27-14,04:00:00,REGULAR,0004800125,0001629149,</sub>
 The data shows the entry/exit register values for each turnstile per control area per station for every four hours.
 
 #### Data Cleaning: 
 Although the data looks clean, it required serious cleaning and checks.
 
 Some anomalies and data cleaning/handling measures:
-*	Station name inconsistencies: Different spellings for the same station (e.g., ‘1 AV’ vs.  ‘1 AVE’)
-               Normalized the station names using the station key from MTA station list.
-*	Line name inconsistencies  (e.g., ‘ABC123’ vs. ‘123ABC’)
-               Replaced line names with corresponding units to avoid inconsistencies
-*	Decreasing cumulative entry/exit counts:
-Used absolute count differences to address decreasing counts
-*	Impossibly large counts:
-           Computed entry/exit rates (usual entry/ exit per sec ) to replace outlier counts with the median
-*	Readings off by an hour:
-            Adjusted the off-by-an-hour counts to the nearest time
+
+*	Station name inconsistencies: Different spellings for the same station (e.g., ‘1 AV’ vs.  ‘1 AVE’). Normalized the station names using the station key from MTA station list.
+*	Line name inconsistencies  (e.g., ‘ABC123’ vs. ‘123ABC’). Replaced line names with corresponding units to avoid inconsistencies
+*	Decreasing cumulative entry/exit counts:Used absolute count differences to address decreasing counts
+*	Impossibly large counts: Computed entry/exit rates (usual entry/ exit per sec ) to replace outlier counts with the median
+*	Readings off by an hour: Adjusted the off-by-an-hour counts to the nearest time
 
 #### Data Analysis/visualization:
 The following graph shows the relationship between the average ridership and day of week:
