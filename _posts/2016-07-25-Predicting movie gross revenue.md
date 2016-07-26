@@ -71,7 +71,7 @@ The Q-Q plot is not a straight line indicating that the error terms are not foll
  After multiple iterations and cross validations, i came up with a model that seem to be consistent with the train 
  and test data.
  
- ### My results :
+ ### Results :
  ```
  Method : Ridge Regression with 10-fold cross validation
 
@@ -86,10 +86,26 @@ Mean -squared error : 0.9755
 
 Both the models seems to have similar results. I went ahead with Lasso, as i want to get rid of less significant variables.
 
-The significant features per the model are :
+Features that positively affect Gross Revenue are :
 ```
-positive :<insert>
-negative:<insert>
+Number of screens
+Budget
+Director
+Run Time
+Months : December,
+         May - July, November
+Genre : Drama, Romance
+Rating : R - Rated
+Rating * Months : PG - May to July
+                : R - December
+Actors
+```
+Features that negatively affect Gross Revenue are :
+
+```
+Rating : Unrated
+Months : Jan -April
+Rating * Months : R - May to July
 ```
 
 So, how well did the model perform on the test data?
