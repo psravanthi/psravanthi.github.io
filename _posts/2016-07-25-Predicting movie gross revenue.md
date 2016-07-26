@@ -10,8 +10,8 @@ What ensures the financial success of a movie? Is it the genre, or is it the sta
 I tried to answer some of these questions by tinkering around with data from boxofficemojo.com.
 
 In this analysis, I scrapped 10 years of movie data from boxofficemojo.
-Scrapped the following details from the movie page
-![average_ridership_by_day_bar](/images/average_ridership_by_day_bar.png)
+Scrapped the movie details from the respective movie page.
+![movie_page](/images/movie_page.png)
 
 The actor/director/writer/producer's information was collected from their respective pages
 
