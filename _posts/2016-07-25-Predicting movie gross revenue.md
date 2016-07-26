@@ -7,11 +7,9 @@ title: Predicting Movie Gross Revenue
 
 Can you predict the success or more so, the total gross of a movie at the box office? 
 What ensures the financial success of a movie? Is it the genre, or is it the star power of a certain actor? 
-I tried to answer some of these questions by tinkering around with data from boxofficemojo.com and IMDB.com
+I tried to answer some of these questions by tinkering around with data from boxofficemojo.com.
 
 In this analysis, I scrapped 10 years of movie data from boxofficemojo.
-
-
 
 Scrapped the following details from the movie page
 Insert screen shot
