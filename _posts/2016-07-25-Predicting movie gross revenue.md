@@ -44,25 +44,35 @@ I went on to check if I have some more problems with the data and the model, in 
 Prob(Omnibus):  0.000
 Prob(JB):   0.00
 The p-value is less than 0.05, rejecting the null hypothesis of having a normally distributed data
-(Insert graphs)
+
+![gross_inflate](/images/gross_inflate.png)
+
+The response variable, Gross revenue is clearly right skewed.
+
+![Q-Q](/images/Q-Q.png)
+
+The Q-Q plot is not a straight line indicating that the error terms are not following a normal distribution.
  
  I have some options to care of this. I can either collect more data, so that the data follows normal distribution by central
  limit theorem or I can try to transform the data so that it follows a normal distribution. I chose to apply a logarithmic
  transformation.
  
- Insert graphs.
+ ![log_gross_inflate](/images/log_gross_inflate.png)
+ 
  
  Having taken care of the non-normal distribution, I have one more problem on my hand. Overfitting !
  Regularization seems to be a plausible solution. So, Lasso or Ridge it is ! 
  I further divided my data - Train data, validation data, test data
  
- Model formulation:
+ ### Model formulation:
+ 
  At each iteration I reduced the number of model parameters by taking out variables that are not significant, and it 
  improves the model performance both on the training set and test set
  After multiple iterations and cross validations, i came up with a model that seem to be consistent with the train 
  and test data.
  
- My results :
+ ### My results :
+ ```
  Method : Ridge Regression with 10-fold cross validation
 
 R-square on test data : 0.78
@@ -72,15 +82,20 @@ Method : Lasso Regression with 10-fold cross validation
 
 R-square on test data : 0.78
 Mean -squared error : 0.9755
+```
 
 Both the models seems to have similar results. I went ahead with Lasso, as i want to get rid of less significant variables.
 
 The significant features per the model are :
+```
 positive :<insert>
 negative:<insert>
+```
 
 So, how well did the model perform on the test data?
-<insert>
+
+![results](/images/results.png)
+
 Got 20 out of 25 right. Not so bad !
  
 
