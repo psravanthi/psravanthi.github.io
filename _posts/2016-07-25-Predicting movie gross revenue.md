@@ -64,14 +64,14 @@ The Q-Q plot is not a straight line indicating that the error terms are not foll
  Regularization seems to be a plausible solution. So, Lasso or Ridge it is ! 
  I further divided my data - Train data, validation data, test data
  
- ### Model formulation:
+ #### Model formulation:
  
  At each iteration I reduced the number of model parameters by taking out variables that are not significant, and it 
  improves the model performance both on the training set and test set
  After multiple iterations and cross validations, i came up with a model that seem to be consistent with the train 
  and test data.
  
- ### Results :
+ #### Results :
  ```
  Method : Ridge Regression with 10-fold cross validation
 
@@ -87,6 +87,7 @@ Mean -squared error : 0.9755
 Both the models seems to have similar results. I went ahead with Lasso, as i want to get rid of less significant variables.
 
 Features that positively affect Gross Revenue are :
+
 ```
 Number of screens
 Budget
