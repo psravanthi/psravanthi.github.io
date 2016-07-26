@@ -11,23 +11,28 @@ I tried to answer some of these questions by tinkering around with data from box
 
 In this analysis, I scrapped 10 years of movie data from boxofficemojo.
 Scrapped the movie details from the respective movie page.
+
 ![movie_page](/images/movie_page.png)
 
-The actor/director/writer/producer's information was collected from their respective pages
+The actor/director/writer/producer's information was collected from their respective pages.
 
-Insert screen shoot
+![actor](/images/actor.png)
 
-I went ahead and built a linear regression on the following features:
+I went ahead and built a linear regression model on the following features:
+
+```
 Genre
 Run Time
 MPAA - Rating
 Budget
 Number of screens
 Number of movies
-Actors previous avg. gross
-Producer previous avg. gross
-Director previous avg. gross
-Writer previous avg. gross
+Previous average gross of the following:
+Three primary actors
+Director
+Producer
+Writer
+```
 
 Prima facie the model looked good. Too good to be true! I had an R-squared of around 0.83 ! And, my coefficients were of the order
 e+07 making the model too sensitive to changes. Did i overfit my data?
