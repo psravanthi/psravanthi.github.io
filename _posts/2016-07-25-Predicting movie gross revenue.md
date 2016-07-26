@@ -32,6 +32,11 @@ Three primary actors
 Director
 Producer
 Writer
+Actors*Director
+Actors*Actors
+Genre*Month
+Rating*Month
+Rating*Genre
 ```
 
 Prima facie the model looked good. Too good to be true! I had an R-squared of around 0.83 ! And, my coefficients were of the order
@@ -60,7 +65,7 @@ The Q-Q plot is not a straight line indicating that the error terms are not foll
  ![log_gross_inflate](/images/log_gross_inflate.png)
  
  
- Having taken care of the non-normal distribution, I have one more problem on my hand. Overfitting !
+ Having taken care of the non-normal distribution, I have one more problem on my hand - Overfitting !
  Regularization seems to be a plausible solution. So, Lasso or Ridge it is ! 
  I further divided my data - Train data, validation data and test data
  
@@ -74,7 +79,7 @@ The Q-Q plot is not a straight line indicating that the error terms are not foll
 #### Results :
 
 ```
- Method : Ridge Regression with 10-fold cross validation
+Method : Ridge Regression with 10-fold cross validation
 
 R-square on test data : 0.78
 Mean -squared error : 0.9758
@@ -102,7 +107,6 @@ Rating * Months : PG - May to July
                 : R - December
 Actors
 ```
-The influence of number of screens is kind of obvious given that the more the number of screens, the more chances for good collections.
 
 Features that negatively affect Gross Revenue are :
 
@@ -111,6 +115,9 @@ Rating : Unrated
 Months : Jan -April
 Rating * Months : R - May to July
 ```
+The influence of number of screens is kind of obvious given that the more the number of screens, the more chances for good collections.
+Movies perform well in December given that it is a holiday. It is interesting to see that May-July is also favorable. This may be because schools are closed during that season and parents might be taking their kids to the movies. This is later reinforced by the interaction of PG-May to July.
+One more interesting and a rather, surprising result is that the presence of an actor whose previous movies have done well does not affect the revenue much. This is not the case with the director. May be content is the king, afterall! 
 
 So, how well did the model perform on the test data?
 
