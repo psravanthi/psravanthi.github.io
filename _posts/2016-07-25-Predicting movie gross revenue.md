@@ -100,6 +100,8 @@ Rating * Months : PG - May to July
                 : R - December
 Actors
 ```
+The influence of number of screens is kind of obvious given that the more the number of screens, the more chances for good collections.
+
 Features that negatively affect Gross Revenue are :
 
 ```
