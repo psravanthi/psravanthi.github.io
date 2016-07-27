@@ -40,8 +40,8 @@ Actors*Actors
 Genre*Month
 Rating*Month
 Rating*Genre
-<sub><sup>'*' indicates interaction</sup></sub>
 ```
+<sub><sup>'*' indicates interaction</sup></sub>
 
 Prima facie the model looked good. Too good to be true! I had an R-squared of around 0.83 ! And, my coefficients were of the order
 e+07 making the model too sensitive to changes. Did I overfit my data?
