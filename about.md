@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Data Scientist with strong analytical background and experience in Machine Learning, Statistics and software programming. Passionate about participating in various data science competitions and gaining valuable  insights from data.
+Data Scientist with strong analytical background and experience in Machine Learning, Statistics and software programming. Passionate about participating in various data science competitions and gaining valuable insights from data.
 
 ### Contact me
 
