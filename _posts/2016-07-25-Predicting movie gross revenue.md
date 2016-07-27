@@ -23,8 +23,7 @@ Used Pythons's Beautiful Soup and Selenium for scraping.
 Apart from the readily available variables, I added a few computed ones. I calculated the average gross of previous movies of the people(Actors,director,producer,writer) involved in a specific movie. 
 
 After some more data munging,I went ahead and built a linear regression model on the following features:
-```
-Genre
+```Genre
 Run Time
 MPAA - Rating
 Budget
