@@ -30,10 +30,10 @@ Budget
 Number of screens
 Number of movies
 Previous average gross of the following:
-* Three primary actors
-* Director
-* Producer
-* Writer
+  Three primary actors
+  Director
+  Producer
+  Writer
 Actors*Director
 Actors*Actors
 Genre*Month
