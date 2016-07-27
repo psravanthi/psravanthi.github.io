@@ -9,7 +9,7 @@ Can you predict the success or more so, the total gross of a movie at the box of
 What ensures the financial success of a movie? Is it the genre, or is it the star power of a certain actor? 
 I tried to answer some of these questions by tinkering around with data from boxofficemojo.com.
 
-In this analysis, I scraped 10 years of movie data from boxofficemojo.
+For this analysis, I scraped 10 years of movie data from boxofficemojo using Pythons's Beautiful Soup and Selenium libraries.
 Collected the movie details from the respective movie page.
 
 ![movie_page](/images/movie_page.png)
@@ -17,8 +17,6 @@ Collected the movie details from the respective movie page.
 The actor/director/writer/producer's information was collected from their respective pages.
 
 ![actor](/images/actor.png)
-
-Used Pythons's Beautiful Soup and Selenium for scraping.
 
 Apart from the readily available variables, I added a few computed ones. I calculated the average gross of previous movies of the people(Actors,director,producer,writer) involved in a specific movie. 
 
