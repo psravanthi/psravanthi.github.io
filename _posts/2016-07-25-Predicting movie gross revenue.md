@@ -23,6 +23,7 @@ Used Pythons's Beautiful Soup and Selenium for scraping.
 Apart from the readily available variables, I added a few computed ones. I calculated the average gross of previous movies of the people(Actors,director,producer,writer) involved in a specific movie. 
 
 After some more data munging,I went ahead and built a linear regression model on the following features:
+
 ```
 Genre
 Run Time
@@ -41,7 +42,7 @@ Genre*Month
 Rating*Month
 Rating*Genre
 ```
-
+<sub><sup>'*' indicates interaction</sup></sub>
 
 Prima facie the model looked good. Too good to be true! I had an R-squared of around 0.83 ! And, my coefficients were of the order
 e+07 making the model too sensitive to changes. Did I overfit my data?
