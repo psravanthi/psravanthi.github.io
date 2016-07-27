@@ -40,7 +40,6 @@ Actors*Actors
 Genre*Month
 Rating*Month
 Rating*Genre
-
 <sub><sup>'*' indicates interaction</sup></sub>
 ```
 
