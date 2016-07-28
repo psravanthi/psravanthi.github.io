@@ -18,12 +18,7 @@ The steps followed for the analysis are as follows:
 The New York subway traffic data can be found at [MTA turnstile data](http://web.mta.info/developers/turnstile.html)
 
 A look at the raw data:
-
-<sub> C/A,UNIT,SCP,STATION,LINENAME,DIVISION,DATE,TIME,DESC,ENTRIES,EXITS </sub>
-
-<sub>A002,R051,02-00-00,LEXINGTON AVE,456NQR,BMT,09-27-14,00:00:00,REGULAR,0004800073,0001629137, </sub>
-
-<sub>A002,R051,02-00-00,LEXINGTON AVE,456NQR,BMT,09-27-14,04:00:00,REGULAR,0004800125,0001629149,</sub>
+![MTA_Turnstile](/images/MTA_Turnstile.jpg) 
 
 The data shows the entry/exit register values for each turnstile per control area per station for every four hours.
 
